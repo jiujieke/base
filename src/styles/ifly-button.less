@@ -1,0 +1,76 @@
+/** 块状按钮 **/
+
+// 绿色
+.ifly-button {
+  border: 1px #1890FF solid;
+  background: #1890FF;
+  border-radius: 2px;
+  width: 72px;
+  height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #259582;
+  }
+}
+
+// 红色
+.ifly-button-error {
+  &:extend(.ifly-button);
+  border: 1px #F32F1F solid;
+  background: #F32F1F;
+
+  &:hover {
+    background-color: #E72F1F;
+  }
+}
+
+// 白色
+.ifly-button-default {
+  &:extend(.ifly-button);
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  color: #606266;
+
+  &:hover {
+    background-color: #F1FAFD;
+  }
+}
+
+
+/** 文本按钮 **/
+
+// 绿色-默认
+.ifly-button-plain {
+  &:extend(.ifly-button);
+  background: none;
+  border: 0;
+  width: auto;
+  height: auto;
+  color: #1890FF;
+
+  &:hover {
+    color: #259582;
+    background: none;
+  }
+}
+
+// 红色
+.ifly-button-error-plain {
+  &:extend(.ifly-button-plain);
+  color: #F32F1F;
+
+  &:hover {
+    color: #E72F1F;
+    background: none;
+  }
+}
+
+// 方形按钮 - mini
+.ify-button-icon-mini {
+  width: 24px;
+  height: 24px;
+}

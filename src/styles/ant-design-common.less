@@ -1,0 +1,302 @@
+/** 
+ * 该文件为处理ant-design-vue莫名的样式错误
+ * 
+ */
+
+// layout 滚动优化
+.ant-layout.ant-layout-has-sider > .ant-layout, .ant-layout.ant-layout-has-sider > .ant-layout-content {
+  overflow-x: unset;
+}
+
+// 分页组件上下页icon 位置错位
+.ant-pagination-item-link {
+    display: list-item !important;
+}
+
+// 表格文字大小统一
+.ant-table table {
+    font-size: @primary-font-size !important;
+    color: @text-color !important;
+}
+
+.ant-modal-close-x {
+    display: list-item !important;
+}
+
+.ant-form-item-label{
+    line-height: 32px !important;
+}
+
+.ant-select-selection--multiple {
+    height: 32px !important;
+}
+
+.ant-form-explain {
+    font-size: 12px !important;
+}
+
+@media screen and (max-width: 1400px) {
+	.ant-tabs-nav-wrap {
+		font-size: @primary-font-size;
+	}
+}
+
+/* 扩展ant design 按钮组件颜色 */
+.ant-btn-project {
+        background-color: @primary-color;
+        border-color: #7f71fa;
+        color: #fff;
+   
+    &:hover, &:focus {
+        background-color: #afa7fa;
+        border-color: #afa7fa;
+        color: #fff;
+    }
+   
+    &:active, &.active {
+        background-color: #5746f3;
+        border-color: #5746f3;
+        color: #fff;
+    }
+}
+
+// 日期选择面板icon错位
+.ant-calendar-header .ant-calendar-prev-century-btn, 
+.ant-calendar-header .ant-calendar-next-century-btn, 
+.ant-calendar-header .ant-calendar-prev-decade-btn, 
+.ant-calendar-header .ant-calendar-next-decade-btn, 
+.ant-calendar-header .ant-calendar-prev-month-btn, 
+.ant-calendar-header .ant-calendar-next-month-btn, 
+.ant-calendar-header .ant-calendar-prev-year-btn, 
+.ant-calendar-header .ant-calendar-next-year-btn{
+    display: list-item !important;
+}
+// 表格loading
+.ant-spin-nested-loading > div > .ant-spin {
+    max-height: 100% !important;
+}
+
+// 表格筛选面板最大高度
+.ant-table-filter-dropdown .ant-dropdown-menu{
+    max-height: 250px;
+}
+.ant-btn-primary {
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.ant-btn-primary[disabled],
+.ant-btn[disabled] {
+  border-color: rgba(0, 0, 0, 0);
+  &:hover {
+    border-color: rgba(0, 0, 0, 0);
+  }
+}
+
+// Tabs全局样式
+.ant-tabs-nav .ant-tabs-tab {
+  font-size: 14px;
+  height: 44px;
+}
+
+.ant-modal-content .ant-modal-close .anticon {
+  margin-top: 16px;
+}
+
+// 表格全局样式
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+  font-size: @primary-font-size;
+}
+.ant-table-fixed {
+    .ant-table-tbody > tr > td {
+      padding: 17px 16px 18px;
+    }
+}
+.ant-table-fixed-right {
+  .ant-table-tbody > tr > td {
+    padding: 17px 16px 18px;
+  }
+}
+.ant-table-tbody > tr > td {
+  padding: 17px 16px 18px;
+}
+.ant-table-fixed-right {
+  .ant-table-tbody > tr > td {
+    .ant-btn {
+      padding: 0 8px;
+    }
+  }
+}
+.ant-table-wrapper {
+  .ant-btn {
+    padding: 0 8px;
+  }
+}
+.ant-table-filter-dropdown .ant-dropdown-menu {
+  max-height: 240px; /* 表格筛选弹窗高度*/
+}
+
+// 树形选择器
+.ant-select-tree-switcher .anticon,
+.ant-tree-switcher .anticon {
+  margin-top: 4px;
+}
+
+// 气泡弹窗
+.ant-popover {
+  z-index: 3000;  /* 气泡弹窗干掉饿了么层级*/
+}
+
+// 上传控件
+.ant-upload-list-item {
+  .anticon.anticon-delete {
+    margin-top: 4px;
+  }
+}
+
+// 树形选择器
+.ant-select-selection--multiple .anticon.ant-select-remove-icon {
+  margin-top: 6px;
+}
+
+::-webkit-scrollbar{
+  width: 4px;/* 纵向滚动条*/
+  height: 4px;/* 横向滚动条 */
+  background-color: #fff;
+}
+
+/*定义滚动条轨道 内阴影*/
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background-color: #fff;
+}
+
+/*定义滑块 内阴影*/
+::-webkit-scrollbar-thumb{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background-color: #D5D5D5;
+}
+
+.ant-pagination-item-link-icon{
+  padding-top: 10px;
+}
+
+// 解决表格空数据筛选框被遮挡、滚动条在表头
+.ant-table-placeholder{
+  position: absolute !important;
+  top: 52px;
+  width: 100%;
+}
+
+.popup-container {
+  .ant-popover-content {
+      box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.15);
+  }
+  .ant-popover-inner-content {
+      max-width: 376px;
+      max-height: 140px;
+      overflow: auto;
+      border-radius: 4px;
+      border-top: 8px solid #fff;
+      border-bottom: 8px solid #fff;
+
+
+      &::-webkit-scrollbar {
+        width: 3px !important;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1) !important;
+      }
+  }
+}
+
+// 级联选择icon错位
+:root .ant-cascader-menu-item-expand .ant-cascader-menu-item-expand-icon, :root .ant-cascader-menu-item-loading-icon{
+  padding-top: 5px;
+}
+
+.primary-color{
+  color: @primary-color;
+}
+
+// 表格筛选按钮布局
+.ant-table-filter-dropdown-link.confirm{
+  float: right !important;
+}
+.ant-table-filter-dropdown-link.clear{
+  float: left !important;
+}
+
+// popover组件设置黑色背景+白色文字
+.popup-container-dark {
+  .ant-popover-inner-content {
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      border-radius: 3px;
+      padding: 8px;
+      max-width: 250px;
+  }
+  &.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+      border-left-color: rgba(0, 0, 0, 0.75);
+      border-top-color: rgba(0, 0, 0, 0.75);
+  }
+  &.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow {
+      border-right-color: rgba(0, 0, 0, 0.75);
+      border-bottom-color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.ant-message{
+  z-index: 19971222 !important;
+}
+
+// tooltip添加黑色背景+白色文字
+.tooltip-container-dark{
+  .ant-tooltip-inner{
+    background: #fff;
+    color: #333;
+  }
+  .ant-tooltip-arrow::before{
+    background: #fff;
+  }
+}
+
+// 下拉选择列表添加内边距
+.ant-select-dropdown-content, .ant-cascader-menus-content{
+  padding: 4px 0;
+}
+
+// 处理级联下拉最长字符显示
+.ant-cascader-menu-item{
+  max-width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ant-cascader-menu{
+  width: unset !important;
+}
+
+.ant-alert-message{
+  color: @text-color;
+}
+
+// 日期选择面板选中置灰默认样式修改
+.ant-calendar-disabled-cell.ant-calendar-selected-day {
+  .ant-calendar-date{
+      background: #D5E1ED;
+      &:hover{
+          background: #D5E1ED;
+      }
+      &:before{
+          background: #D5E1ED;
+          opacity: 0.1;
+      }
+  }
+}
+
+// 滑块组件 滑道背景色
+.ant-slider-track {
+  background-color: @primary-color;
+}
